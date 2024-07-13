@@ -1,0 +1,91 @@
+POST http://localhost:4014/login/
+Content-Type: application/json
+
+{
+  "username": "christopher_phillips",
+  "password": "christy@123"
+}
+//Scenario Return JWT token
+###
+POST http://localhost:4014/login/
+Content-Type: application/json
+
+{
+  "username": "christopher_phillips1",
+  "password": "christy@123"
+}
+//Scenario1 Invalid USER
+###
+POST http://localhost:4014/login/
+Content-Type: application/json
+
+{
+  "username": "christopher_phillips",
+  "password": "christy@1233"
+}
+//Scenario2 Invalid  Password
+//END OF API1
+###
+
+http://localhost:4014/states/
+//JWT token undefined
+//INvalid JWT Token (for AUthorization purpose)
+###
+http://localhost:4014/states/
+Authorization: Bearer e1yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjkxNzc2ODAxfQ.3STpaZkCRW-OmWup2v3us0e3u3IK7XaAdY8VajgOI_A
+//JWT token defined(but invalid jwtToken=e1yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjkxNzc2ODAxfQ.3STpaZkCRW-OmWup2v3us0e3u3IK7XaAdY8VajgOI_A
+//JWT token undefined)
+//INvalid JWT Token (for AUthorization purpose)
+###
+//Start Of Api2
+###
+GET http://localhost:4014/states/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjkxNzc2ODAxfQ.3STpaZkCRW-OmWup2v3us0e3u3IK7XaAdY8VajgOI_A
+// End of API2
+###
+GET http://localhost:4014/states/8/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjkxNzc2ODAxfQ.3STpaZkCRW-OmWup2v3us0e3u3IK7XaAdY8VajgOI_A
+// End of API3
+###
+POST http://localhost:4014/districts/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjkxNzc2ODAxfQ.3STpaZkCRW-OmWup2v3us0e3u3IK7XaAdY8VajgOI_A
+Content-Type: application/json
+
+{
+  "districtName": "Bagalkot",
+  "stateId": 3,
+  "cases": 2323,
+  "cured": 2000,
+  "active": 315,
+  "deaths": 8
+}
+// End of API4
+###
+GET http://localhost:4014/districts/5/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjkxNzc2ODAxfQ.3STpaZkCRW-OmWup2v3us0e3u3IK7XaAdY8VajgOI_A
+// End of API5
+###
+DELETE http://localhost:4014/districts/5/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjkxNzc2ODAxfQ.3STpaZkCRW-OmWup2v3us0e3u3IK7XaAdY8VajgOI_A
+// End of API6
+###
+PUT http://localhost:4014/districts/6/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjkxNzc2ODAxfQ.3STpaZkCRW-OmWup2v3us0e3u3IK7XaAdY8VajgOI_A
+Content-Type: application/json
+
+{
+  "districtName": "Nadia",
+  "stateId": 3,
+  "cases": 9628,
+  "cured": 6524,
+  "active": 3000,
+  "deaths": 104
+}
+//end of Api 7
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjkxNzc2ODAxfQ.3STpaZkCRW-OmWup2v3us0e3u3IK7XaAdY8VajgOI_A
+Content-Type: application/json
+//END of API 8
+###
+GET http://localhost:7000/
+###
+GET http://localhost:7000/user
