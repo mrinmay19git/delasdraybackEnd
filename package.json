@@ -9,12 +9,13 @@
     "start": "node index.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "postinstall": "npm rebuild sqlite3",
+    "postinstall": "npm rebuild sqlite3"
 
   },
   "engines": {
     "node": "14.x"
   },
+
 
   "author": "",
   "license": "ISC",
