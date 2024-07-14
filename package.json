@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "homepage": "./",
-  
   "scripts": {
     "start": "node index.js",
     "build": "react-scripts build",
@@ -14,8 +13,6 @@
   "engines": {
     "node": "14.x"
   },
-
-  
   "author": "",
   "license": "ISC",
   "dependencies": {
