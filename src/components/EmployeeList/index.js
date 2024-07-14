@@ -48,7 +48,6 @@ function EmployeeList() {
     fetch('https://delasdraybackend.onrender.com')
      .then(response => response.json())
      .then(data => {
-        console(data);
         setEmployees(data);
         setLoading(false);
       })
