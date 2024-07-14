@@ -5,7 +5,7 @@
   "main": "index.js",
   "homepage": "./",
     "scripts": {
-  "install": "npm install",
+  "install": "npm start",
   "start": "node index.js"
 },
   "author": "",
